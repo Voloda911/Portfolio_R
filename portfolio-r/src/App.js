@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Cekle from "./Components/Cekle";
-
+import HomeMain from "./Components/HomeMain";
+import About from "./Components/About";
 import "./index.css";
 function App() {
   return (
-    <div>
-      <Cekle />
+    <div className="app">
+      <HomeMain />
+      <About />
     </div>
   );
 }
