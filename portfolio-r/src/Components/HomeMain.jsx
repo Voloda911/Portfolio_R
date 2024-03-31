@@ -5,7 +5,10 @@ import Collapse from "react-bootstrap/Collapse";
 import MyButton from "./button/MyButton";
 function Header({ setStep }) {
   return (
-    <div style={{ backgroundColor: "transparent" }} className="header">
+    <div
+      style={{ backgroundColor: "transparent", position: "fixed" }}
+      className="header"
+    >
       <div
         className="col-sm-4"
         style={{
@@ -37,13 +40,14 @@ function Header({ setStep }) {
 function Main() {
   return (
     <div className="continer">
-      <Header />
       <div>
         <section>
           <h1
             className=""
             style={{
-              fontSize: "230px",
+              fontSize: "100px",
+              textAlign: "center",
+
               fontFamily: "monospace",
               textTransform: "uppercase",
               display: "grid",
@@ -57,9 +61,9 @@ function Main() {
                 "url(https://images.pexels.com/photos/105857/pexels-photo-105857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
             }}
           >
-            para
+            Volodymyr
             <br />
-            llax
+            Siuryk
           </h1>{" "}
         </section>
       </div>
@@ -67,11 +71,11 @@ function Main() {
         className="text"
         style={{
           width: "100%",
-
           height: "100vh",
           padding: "0",
           margin: "0",
           display: "flex",
+          flexDirection: "row",
           justifyContent: "center",
           backgroundColor: "cadetblue",
         }}
@@ -102,21 +106,22 @@ function Main() {
         <div
           className="rigth_side"
           style={{
-            width: "40%",
+            width: "30%",
             height: "50vh",
           }}
         ></div>
         <div
           className="left_side"
           style={{
-            width: "60%",
-            padding: "1em 4em",
+            width: "70%",
+            padding: "4em 4em",
             height: "50vh",
             backgroundColor: "gray",
           }}
-        ></div>
+        >
+          <div></div>
+        </div>
       </div>
-      <MyButton />
     </div>
   );
 }
